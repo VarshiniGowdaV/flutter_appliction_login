@@ -1,0 +1,70 @@
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_application_1/login_page.dart';
+
+class Homepage extends StatefulWidget {
+  const Homepage({super.key});
+
+  @override
+  State<Homepage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<Homepage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Welcome User"),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.logout),
+            onPressed: () async {
+              await FirebaseAuth.instance.signOut();
+
+              if (!context.mounted) return;
+
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => LoginPage()),
+              );
+            },
+          )
+        ],
+      ),
+      body: Center(child: Text("You are Logged In!")),
+    );
+  }
+}
+
+// import 'package:firebase_auth/firebase_auth.dart';
+// import 'package:flutter/material.dart';
+// import 'package:flutter_application_1/login_page.dart';
+
+// class Homepage extends StatefulWidget {
+//   const Homepage({super.key});
+
+//   @override
+//   State<Homepage> createState() => _HomePageState();
+// }
+
+// class _HomePageState extends State<Homepage> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title:Text("Welcome User"),
+//         actions: [
+//           IconButton(
+//             icon: Icon(Icons.logout),
+//             onPressed:()async{
+//               await FirebaseAuth.instance.signOut();
+//               Navigator.pushReplacement( context ,
+//                MaterialPageRoute(builder: (context)=>LoginPage()),);            
+//                },
+//           )
+//         ],
+//         ),
+//         body: Center(child:Text("You are Logged In!")),
+//     );
+//   }
+// }

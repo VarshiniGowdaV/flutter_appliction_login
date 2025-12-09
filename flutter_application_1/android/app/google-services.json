@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "876754816088",
+    "project_id": "fir-options-beafd",
+    "storage_bucket": "fir-options-beafd.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:876754816088:android:7924b3b680f2d71ede4e2d",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZqsNJUETe2hTO5_k51w01WnDItGiEJOY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
