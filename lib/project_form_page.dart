@@ -27,25 +27,21 @@ class _ProjectFormPageState extends State<ProjectFormPage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
 
-            /// Project Title
             buildLabel("Project Title"),
             buildTextField("Enter the Project Title"),
 
-            /// Description
             buildLabel("Project Description"),
             buildTextField(
               "Provide a detailed description of your project",
               maxLines: 4,
             ),
 
-            /// Price
             buildLabel("Price"),
             buildTextField(
               "0.00",
               keyboardType: TextInputType.number,
             ),
 
-            /// Category
             buildLabel("Category"),
             DropdownButtonFormField(
               decoration: fieldDecoration(),
@@ -56,7 +52,6 @@ class _ProjectFormPageState extends State<ProjectFormPage> {
             ),
             const SizedBox(height: 15),
 
-            /// Sub Category
             buildLabel("Sub Category"),
             DropdownButtonFormField(
               decoration: fieldDecoration(),
@@ -67,7 +62,6 @@ class _ProjectFormPageState extends State<ProjectFormPage> {
             ),
             const SizedBox(height: 15),
 
-            /// Difficulty
             buildLabel("Difficulty"),
             DropdownButtonFormField(
               decoration: fieldDecoration(),
@@ -78,23 +72,18 @@ class _ProjectFormPageState extends State<ProjectFormPage> {
             ),
             const SizedBox(height: 15),
 
-            /// Duration
             buildLabel("Duration"),
             buildTextField("8-10 Weeks"),
 
-            /// Benefits
             buildLabel("How it benefits users"),
             buildTextField("Describe the benefits for users", maxLines: 4),
 
-            /// Learning Objectives
             buildLabel("Learning Objectives"),
             buildTextField("Describe the learning objectives", maxLines: 4),
 
-            /// Key Takeaways
             buildLabel("Key Takeaways"),
             buildTextField("Describe the key takeaways", maxLines: 4),
 
-            /// Additional Remarks
             buildLabel("Additional Remarks"),
             buildTextField(
               "Write remarks to help users understand the project",
@@ -103,7 +92,6 @@ class _ProjectFormPageState extends State<ProjectFormPage> {
 
             const SizedBox(height: 20),
 
-            /// Attachments Section
             const Text(
               "Attachments",
               style: TextStyle(fontWeight: FontWeight.bold),
@@ -116,7 +104,6 @@ class _ProjectFormPageState extends State<ProjectFormPage> {
 
             const SizedBox(height: 20),
 
-            /// Terms
             Row(
               children: [
                 Checkbox(
@@ -131,7 +118,6 @@ class _ProjectFormPageState extends State<ProjectFormPage> {
 
             const SizedBox(height: 20),
 
-            /// Save Button
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
@@ -149,7 +135,6 @@ class _ProjectFormPageState extends State<ProjectFormPage> {
 
             const SizedBox(height: 10),
 
-            /// Publish Button
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
